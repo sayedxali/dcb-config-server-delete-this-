@@ -1,1 +1,9 @@
-
+# eureka configuration
+eureka:
+  instance:
+    prefer-ip-address: true # ?
+  client:
+    fetch-registry: true # default is true
+    register-with-eureka: true # default is true
+    service-url: # the address where this client can connect to (eureka server address | it is a map)
+      defaultZone: ${EUREKA_SERVER_URL_ADDRESS:http://localhost:8761/eureka}
